@@ -1,15 +1,15 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import MainPage from './pages/MainPage';
-import LayoutTemplate from './template/LayoutTemplate';
 import DiaryPage from './pages/DiaryPage';
 import TodoPage from './pages/TodoPage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
-import ManagePage from './pages/ManagePage';
 import HomePage from './pages/HomePage';
 import MemoPage from './pages/MemoPage';
 import ProfilePage from './pages/ProfilePage';
+import MainLayout from './layout/MainLayout';
+import CulturePage from './pages/CulturePage';
 
 const router = createBrowserRouter([
     {
@@ -30,15 +30,11 @@ const router = createBrowserRouter([
         ],
     },
     {
-        element: <LayoutTemplate />,
+        element: <MainLayout />,
         children: [
             {
                 path: '/',
                 element: <HomePage />,
-            },
-            {
-                path: '/Manage',
-                element: <ManagePage />,
             },
             {
                 path: '/diary',
@@ -52,12 +48,17 @@ const router = createBrowserRouter([
                 path: '/memo',
                 element: <MemoPage />,
             },
+						{
+							path: '/culture',
+							element: <CulturePage />,
+					},
+						{
+							path: '/profile',
+							element: <ProfilePage />,
+					},
         ],
     },
-    {
-        path: '/profile',
-        element: <ProfilePage />,
-    },
+    
     {
         path: '*',
         element: <div>Not Found</div>,
