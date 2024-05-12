@@ -6,7 +6,7 @@ export default function Header() {
         <div className="header_container">
             <div className="select_day">5월 3일</div>
             <input type="text" className="search_bar" placeholder="검색어를 입력하세요" />
-            <Avatar />
+            <Avatar width="2.5rem" height="2.5rem" />
         </div>
     );
 }

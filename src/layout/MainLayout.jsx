@@ -6,7 +6,7 @@ import './MainLayout.css'
 export default function MainLayout() {
     return (
         <div className='main_container'>
-            <section className='sidebar_nav_btn'>
+            <section className='sidebar_section'>
                 <Sidebar />
             </section>
             <section className='content_section'>
