@@ -1,0 +1,18 @@
+.header_container {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1rem;
+    color: #84a59d;
+}
+
+.search_bar {
+    width: 70%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 2px solid #84a59d;
+    background: none;
+}
