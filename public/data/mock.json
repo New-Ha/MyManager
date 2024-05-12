@@ -1,0 +1,79 @@
+{
+	"todos": [
+		{
+			"id": 1,
+			"category": "habit",
+			"content": "물 마시기",
+			"createdAt": "2024-01-01",
+			"updatedAt": "2024-01-01",
+			"isChecked": false
+		},
+		{
+			"id": 2,
+			"category": "todo",
+			"content": "react 공부하기",
+			"createdAt": "2024-01-01",
+			"updatedAt": "2024-01-01",
+			"isChecked": true
+		},
+		{
+			"id": 3,
+			"category": "todo",
+			"content": "type 공부하기",
+			"createdAt": "2024-01-01",
+			"updatedAt": "2024-01-01",
+			"isChecked": false
+		},
+		{
+			"id": 4,
+			"category": "habit",
+			"content": "운동하기",
+			"createdAt": "2024-01-01",
+			"updatedAt": "2024-01-01",
+			"isChecked": true
+		}
+	],
+	"diary": [
+		{
+			"id": 1,
+			"content": "그저그럼",
+			"createdAt": "2024-01-01"
+		},
+		{
+			"id": 2,
+			"content": "기분나쁨",
+			"createdAt": "2024-01-02"
+		},
+		{
+			"id": 3,
+			"content": "기분좋음",
+			"createdAt": "2024-01-03"
+		}
+	],
+	"culture": [
+		{
+			"id": 1,
+			"category": "book",
+			"title": "그리고 당신의 애인",
+			"author": "태주",
+			"content": "감명깊었다.",
+			"createAt": "2024-02-03"
+		},
+		{
+			"id": 2,
+			"category": "movie",
+			"title": "범죄되시3",
+			"director": "마동석",
+			"content": "감명깊었다.",
+			"createAt": "2024-02-04"
+		}
+	],
+	"memo": [
+		{
+			"id": 1,
+			"title": "이러지말자",
+			"content": "이러지말자.",
+			"createAt": "2024-02-02"
+		}
+	]
+}
