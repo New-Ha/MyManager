@@ -10,6 +10,7 @@ import MemoPage from './pages/MemoPage';
 import ProfilePage from './pages/ProfilePage';
 import MainLayout from './layout/MainLayout';
 import CulturePage from './pages/CulturePage';
+import CreatePage from './pages/CreatePage';
 
 const router = createBrowserRouter([
     {
@@ -48,17 +49,21 @@ const router = createBrowserRouter([
                 path: '/memo',
                 element: <MemoPage />,
             },
-						{
-							path: '/culture',
-							element: <CulturePage />,
-					},
-						{
-							path: '/profile',
-							element: <ProfilePage />,
-					},
+            {
+                path: '/culture',
+                element: <CulturePage />,
+            },
+            {
+                path: '/profile',
+                element: <ProfilePage />,
+            },
+            {
+                path: '/create',
+                element: <CreatePage />,
+            },
         ],
     },
-    
+
     {
         path: '*',
         element: <div>Not Found</div>,
