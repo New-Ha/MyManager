@@ -1,0 +1,10 @@
+.todoList_container {
+    height: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 1.5rem;
+    background-color: white;
+}

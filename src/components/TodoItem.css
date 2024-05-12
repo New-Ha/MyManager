@@ -1,0 +1,39 @@
+.todoItem_container {
+    width: 23%;
+    height: 8rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.habit {
+    background-color: #e2ece9;
+    border: 2px solid #bed7d0;
+}
+
+.todo {
+    background-color: #fff1e6;
+    border: 2px solid #ebd4c2;
+}
+
+.todoItem_top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.todoItem_btn_container {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.todoItem_btn_container > button {
+    border: none;
+    color: gray;
+    background: none;
+}
+
+.todoItem_content {
+    text-align: start;
+}
