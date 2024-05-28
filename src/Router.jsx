@@ -2,14 +2,14 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import MainPage from './pages/MainPage';
 import DiaryPage from './pages/DiaryPage';
-import TodoPage from './pages/TodoPage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import HomePage from './pages/HomePage';
 import MemoPage from './pages/MemoPage';
 import ProfilePage from './pages/ProfilePage';
 import MainLayout from './layout/MainLayout';
-import CulturePage from './pages/CulturePage';
+import MoviesPage from './pages/MoviesPage';
+import BooksPage from './pages/BooksPage';
 
 const router = createBrowserRouter([
     {
@@ -41,24 +41,23 @@ const router = createBrowserRouter([
                 element: <DiaryPage />,
             },
             {
-                path: '/todo',
-                element: <TodoPage />,
+                path: '/books',
+                element: <BooksPage />,
             },
             {
-                path: '/memo',
+                path: '/movies',
+                element: <MoviesPage />,
+            },
+            {
+                path: '/memos',
                 element: <MemoPage />,
             },
-						{
-							path: '/culture',
-							element: <CulturePage />,
-					},
-						{
-							path: '/profile',
-							element: <ProfilePage />,
-					},
+            {
+                path: '/profile',
+                element: <ProfilePage />,
+            },
         ],
     },
-    
     {
         path: '*',
         element: <div>Not Found</div>,
