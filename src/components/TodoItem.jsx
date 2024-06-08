@@ -9,8 +9,11 @@ const TodoItemContainer = styled.div`
     border: 1.5px solid ${props => props.theme.black};
     border-radius: 10px;
     margin-bottom: 0.75rem;
+    background-color: white;
     display: flex;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.1) 0px -3px 0px inset;
 `;
 
 const TodoItemCheckBox = styled.input`

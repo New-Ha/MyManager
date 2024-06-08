@@ -25,19 +25,25 @@ const mock = [
     },
 ];
 
-const TodoListContainer = styled.div`
-    padding: 2rem;
-    height: 85%;
-    background-color: #fff;
-    border-radius: 30px;
-    background: #f5f5f5;
-    box-shadow: 9px 9px 18px #e4e4e4, -9px -9px 18px #ffffff;
+const TodoListContainer = styled.section`
+    height: 80%;
+    background-color: ${props => props.theme.yellow};
+    border: 1.5px solid ${props => props.theme.black};
+    border-radius: 20px;
+    padding: 1rem;
+`;
+
+const Title = styled.div`
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 1rem;
 `;
 
 export default function TodoList() {
     return (
         <TodoListContainer>
-            Todos
+            <Title>TODOs</Title>
             {mock.map(item => (
                 <TodoItem key={item.id} id={item.id} title={item.title} isDone={item.isDone} content={item.content} />
             ))}
