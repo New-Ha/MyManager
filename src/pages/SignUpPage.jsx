@@ -9,8 +9,8 @@ export const SignContainer = styled.div`
     margin: 0 auto;
     margin-top: 7rem;
     padding: 3rem 2rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,21 +42,21 @@ export const FormContainer = styled.form`
 export const SignInput = styled.input`
     width: 350px;
     font-size: 1rem;
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     background: none;
-    border: 1px solid ${props => props.theme.gray};
-    border-radius: 5px;
+    border: 1.5px solid ${props => props.theme.darkGray};
+    border-radius: 15px;
 `;
 
 export const SubmitButton = styled.button`
     margin-top: 1rem;
-    width: 350px;
+    width: 348px;
     font-size: 1rem;
     font-weight: 500;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     background-color: ${props => props.theme.red};
-    border: none;
-    border-radius: 5px;
+    border: 1.5px solid ${props => props.theme.black};
+    border-radius: 30px;
     color: white;
     cursor: pointer;
 `;

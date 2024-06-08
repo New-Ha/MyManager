@@ -6,9 +6,9 @@ const size = {
 
 const theme = {
     black: '#4D4D4D',
-		gray: '#D9D9D9',
+    gray: '#D9D9D9',
     yellow: '#F6BD60',
-		deepGreen: '#51625E',
+    deepGreen: '#51625E',
     green: '#84A59D',
     red: '#F28482',
     purple: '#CCB6DC',
