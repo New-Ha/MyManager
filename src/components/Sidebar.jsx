@@ -9,8 +9,8 @@ import Logout from '../assets/logout_icon.svg?react';
 
 const SideBarContainer = styled.nav`
     width: 250px;
-    height: 90%;
-    padding: 4rem 2rem;
+    height: 100%;
+    padding: 4rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,8 +20,7 @@ const SideBarContainer = styled.nav`
 `;
 
 const ProfileContainer = styled.div`
-    width: 100%;
-    height: 5rem;
+    padding: 1rem;
     border: 1.5px solid ${props => props.theme.black};
     border-radius: 20px;
     margin-bottom: 1.75rem;
@@ -82,7 +81,7 @@ const LogOutContainer = styled(NavLinkButton)`
 `;
 
 const NavStr = styled.div`
-    margin-left: 1.25rem;
+    margin-left: 1.5rem;
     color: ${props => props.theme.black};
     font-weight: 500;
 `;

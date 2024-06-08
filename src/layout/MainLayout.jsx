@@ -3,6 +3,9 @@ import Sidebar from '../components/Sidebar';
 import styled from 'styled-components';
 
 const Container = styled.div`
+    margin: 2rem auto;
+    width: 90vw;
+    height: 90vh;
     display: flex;
     gap: 30px;
 `;
