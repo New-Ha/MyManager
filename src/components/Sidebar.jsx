@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import Home from '../assets/home_icon.svg?react';
-import Calender from '../assets/calender_icon.svg?react';
-import Book from '../assets/book_icon.svg?react';
-import Movie from '../assets/movie_icon.svg?react';
-import Memo from '../assets/memo_icon.svg?react';
-import Logout from '../assets/logout_icon.svg?react';
+import Home from '../assets/icon/home_icon.svg?react';
+import Calender from '../assets/icon/calender_icon.svg?react';
+import Book from '../assets/icon/book_icon.svg?react';
+import Movie from '../assets/icon/movie_icon.svg?react';
+import Memo from '../assets/icon/memo_icon.svg?react';
+import Logout from '../assets/icon/logout_icon.svg?react';
+import { path } from '../Router';
 
 const SideBarContainer = styled.nav`
     width: 250px;
@@ -19,7 +20,7 @@ const SideBarContainer = styled.nav`
     gap: 1.25rem;
 `;
 
-const ProfileContainer = styled.div`
+const ProfileContainer = styled(Link)`
     padding: 1rem;
     border: 1.5px solid ${props => props.theme.black};
     border-radius: 20px;
@@ -27,6 +28,7 @@ const ProfileContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 `;
 
 const AvatarContainer = styled.div`
@@ -54,16 +56,12 @@ const WelcomeStr = styled.p`
 
 const NavButtonContainer = styled.div`
     border-radius: 10px;
-    :hover {
+    &:hover {
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    }
-    :active {
-        border: 1.5px solid ${props => props.theme.black};
-        background-color: ${props => props.theme.yellow};
     }
 `;
 
-const NavLinkButton = styled(Link)`
+const NavLinkButton = styled(NavLink)`
     width: 100%;
     padding: 0.75rem 2rem;
     border: 1.5px solid white;
@@ -71,13 +69,17 @@ const NavLinkButton = styled(Link)`
     display: flex;
     align-items: center;
     text-decoration: none;
+    &.active {
+        border: 1.5px solid ${props => props.theme.black};
+        background-color: ${props => props.theme.yellow};
+    }
 `;
 
 const LogOutContainer = styled(NavLinkButton)`
     margin-top: 2rem;
     border: 1.5px solid ${props => props.theme.black};
     border-radius: 30px;
-    background-color: ${props => props.theme.green};
+    background-color: ${props => props.theme.red};
 `;
 
 const NavStr = styled.div`
@@ -93,7 +95,7 @@ const LogOutStr = styled(NavStr)`
 export default function Sidebar() {
     return (
         <SideBarContainer>
-            <ProfileContainer>
+            <ProfileContainer to={path.PROFILE}>
                 <AvatarContainer></AvatarContainer>
                 <UserInfo>
                     <UserName>유하님💕</UserName>
@@ -101,36 +103,36 @@ export default function Sidebar() {
                 </UserInfo>
             </ProfileContainer>
             <NavButtonContainer>
-                <NavLinkButton to="/">
+                <NavLinkButton to={path.HOME}>
                     <Home />
                     <NavStr>Home</NavStr>
                 </NavLinkButton>
             </NavButtonContainer>
             <NavButtonContainer>
-                <NavLinkButton to="/">
+                <NavLinkButton to={path.CALENDER}>
                     <Calender />
                     <NavStr>Calender</NavStr>
                 </NavLinkButton>
             </NavButtonContainer>
             <NavButtonContainer>
-                <NavLinkButton to="/books">
+                <NavLinkButton to={path.BOOK}>
                     <Book />
                     <NavStr>Book</NavStr>
                 </NavLinkButton>
             </NavButtonContainer>
             <NavButtonContainer>
-                <NavLinkButton to="/movies">
+                <NavLinkButton to={path.MOVIE}>
                     <Movie />
                     <NavStr>Movie</NavStr>
                 </NavLinkButton>
             </NavButtonContainer>
             <NavButtonContainer>
-                <NavLinkButton to="/memos">
+                <NavLinkButton to={path.MEMO}>
                     <Memo />
                     <NavStr>Memo</NavStr>
                 </NavLinkButton>
             </NavButtonContainer>
-            <LogOutContainer>
+            <LogOutContainer to={path.MAIN}>
                 <Logout />
                 <LogOutStr>Log out</LogOutStr>
             </LogOutContainer>

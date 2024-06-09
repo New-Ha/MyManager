@@ -26,7 +26,7 @@ const mock = [
 ];
 
 const TodoListContainer = styled.section`
-    height: 80%;
+    height: 90%;
     background-color: ${props => props.theme.yellow};
     border: 1.5px solid ${props => props.theme.black};
     border-radius: 20px;

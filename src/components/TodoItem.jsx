@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import Edit from '../assets/edit_icon.svg?react';
-import Delete from '../assets/trash_icon.svg?react';
+import Edit from '../assets/icon/edit_icon.svg?react';
+import Delete from '../assets/icon/trash_icon.svg?react';
 
 const TodoItemContainer = styled.div`
     width: 100%;
