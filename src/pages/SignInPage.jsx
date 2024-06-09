@@ -9,7 +9,7 @@ import {
     SubmitButton,
     ErrorMessage,
 } from './SignUpPage';
-import Logo from '../assets/logo.svg?react';
+import Logo from '../assets/icon/logo.svg?react';
 import { supabase } from '../libs/supabaseClient';
 
 export default function SignInPage() {

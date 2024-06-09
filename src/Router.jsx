@@ -11,20 +11,33 @@ import MainLayout from './layout/MainLayout';
 import MoviesPage from './pages/MoviesPage';
 import BooksPage from './pages/BooksPage';
 
+export const path = {
+    MAIN: '/main',
+    SIGN: '/sign',
+    SIGNIN: 'in',
+    SIGNUP: 'up',
+    HOME: '/',
+    CALENDER: '/diary/:id',
+    BOOK: '/book',
+    MOVIE: '/movie',
+    MEMO: '/memo',
+    PROFILE: '/profile',
+};
+
 const router = createBrowserRouter([
     {
-        path: '/main',
+        path: path.MAIN,
         element: <MainPage />,
     },
     {
-        path: '/sign',
+        path: path.SIGN,
         children: [
             {
-                path: 'in',
+                path: path.SIGNIN,
                 element: <SignInPage />,
             },
             {
-                path: 'up',
+                path: path.SIGNUP,
                 element: <SignUpPage />,
             },
         ],
@@ -33,27 +46,27 @@ const router = createBrowserRouter([
         element: <MainLayout />,
         children: [
             {
-                path: '/',
+                path: path.HOME,
                 element: <HomePage />,
             },
             {
-                path: '/diary',
+                path: path.CALENDER,
                 element: <DiaryPage />,
             },
             {
-                path: '/books',
+                path: path.BOOK,
                 element: <BooksPage />,
             },
             {
-                path: '/movies',
+                path: path.MOVIE,
                 element: <MoviesPage />,
             },
             {
-                path: '/memos',
+                path: path.MEMO,
                 element: <MemoPage />,
             },
             {
-                path: '/profile',
+                path: path.PROFILE,
                 element: <ProfilePage />,
             },
         ],
