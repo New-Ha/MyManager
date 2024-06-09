@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import TodoItem from './TodoItem';
-import { MainContainer } from '../util/styles';
+import { MainContainer } from '../util/templateStyle';
 
 const mock = [
     {

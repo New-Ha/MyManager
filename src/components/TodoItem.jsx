@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import Edit from '../assets/icon/edit_icon.svg?react';
 import Delete from '../assets/icon/trash_icon.svg?react';
-import { ContentsContainer } from '../util/styles';
+import { ContentsContainer } from '../util/templateStyle';
 
 const TodoItemContainer = styled(ContentsContainer)`
     width: 100%;

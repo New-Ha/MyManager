@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MainContainer } from '../util/styles';
+import { MainContainer } from '../util/templateStyle';
 
 const WeatherContainer = styled(MainContainer)`
     width: 280px;
