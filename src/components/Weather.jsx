@@ -1,11 +1,10 @@
 import styled from 'styled-components';
+import { MainContainer } from '../util/styles';
 
-const WeatherContainer = styled.div`
+const WeatherContainer = styled(MainContainer)`
+    width: 280px;
     height: 15%;
-    background-color: #fff;
-    border-radius: 30px;
-    background: #f5f5f5;
-    box-shadow: 9px 9px 18px #e4e4e4, -9px -9px 18px #ffffff;
+    background-color: ${props => props.theme.green};
 `;
 
 export default function Weather() {
