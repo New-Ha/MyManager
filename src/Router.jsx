@@ -10,7 +10,6 @@ import ProfilePage from './pages/ProfilePage';
 import HomeLayout from './layout/HomeLayout';
 import MoviesPage from './pages/MoviesPage';
 import BooksPage from './pages/BooksPage';
-import CultureLayout from './layout/CultureLayout';
 import MainLayout from './layout/MainLayout';
 
 export const path = {
@@ -61,21 +60,16 @@ const router = createBrowserRouter([
                 ],
             },
             {
-                element: <CultureLayout />,
-                children: [
-                    {
-                        path: path.BOOK,
-                        element: <BooksPage />,
-                    },
-                    {
-                        path: path.MOVIE,
-                        element: <MoviesPage />,
-                    },
-                    {
-                        path: path.MEMO,
-                        element: <MemoPage />,
-                    },
-                ],
+                path: path.BOOK,
+                element: <BooksPage />,
+            },
+            {
+                path: path.MOVIE,
+                element: <MoviesPage />,
+            },
+            {
+                path: path.MEMO,
+                element: <MemoPage />,
             },
             {
                 path: path.PROFILE,

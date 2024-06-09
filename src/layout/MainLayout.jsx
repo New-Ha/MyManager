@@ -7,7 +7,7 @@ export const LayoutContainer = styled.div`
     width: 90vw;
     height: 90vh;
     display: flex;
-    gap: 1.75rem;
+    gap: 1.5rem;
 `;
 
 export default function MainLayout() {
