@@ -11,13 +11,13 @@ import MainLayout from './layout/MainLayout';
 import MoviesPage from './pages/MoviesPage';
 import BooksPage from './pages/BooksPage';
 
-const path = {
+export const path = {
     MAIN: '/main',
     SIGN: '/sign',
     SIGNIN: 'in',
     SIGNUP: 'up',
     HOME: '/',
-    CALENDER: '/calender',
+    CALENDER: '/diary/:id',
     BOOK: '/book',
     MOVIE: '/movie',
     MEMO: '/memo',

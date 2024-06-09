@@ -111,7 +111,7 @@ export default function Sidebar() {
             <NavButtonContainer>
                 <NavLinkButton to={path.CALENDER}>
                     <Calender />
-                    <NavStr>Calender</NavStr>
+                    <NavStr>Diary</NavStr>
                 </NavLinkButton>
             </NavButtonContainer>
             <NavButtonContainer>
