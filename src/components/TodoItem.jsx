@@ -2,18 +2,14 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import Edit from '../assets/icon/edit_icon.svg?react';
 import Delete from '../assets/icon/trash_icon.svg?react';
+import { ContentsContainer } from '../util/styles';
 
-const TodoItemContainer = styled.div`
+const TodoItemContainer = styled(ContentsContainer)`
     width: 100%;
-    padding: 1rem;
-    border: 1.5px solid ${props => props.theme.black};
-    border-radius: 10px;
     margin-bottom: 0.75rem;
     background-color: white;
     display: flex;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.1) 0px -3px 0px inset;
 `;
 
 const TodoItemCheckBox = styled.input`
