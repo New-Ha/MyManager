@@ -7,9 +7,11 @@ import SignUpPage from './pages/SignUpPage';
 import HomePage from './pages/HomePage';
 import MemoPage from './pages/MemoPage';
 import ProfilePage from './pages/ProfilePage';
-import MainLayout from './layout/MainLayout';
+import HomeLayout from './layout/HomeLayout';
 import MoviesPage from './pages/MoviesPage';
 import BooksPage from './pages/BooksPage';
+import CultureLayout from './layout/CultureLayout';
+import MainLayout from './layout/MainLayout';
 
 export const path = {
     MAIN: '/main',
@@ -46,24 +48,34 @@ const router = createBrowserRouter([
         element: <MainLayout />,
         children: [
             {
-                path: path.HOME,
-                element: <HomePage />,
+                element: <HomeLayout />,
+                children: [
+                    {
+                        path: path.HOME,
+                        element: <HomePage />,
+                    },
+                    {
+                        path: path.CALENDER,
+                        element: <DiaryPage />,
+                    },
+                ],
             },
             {
-                path: path.CALENDER,
-                element: <DiaryPage />,
-            },
-            {
-                path: path.BOOK,
-                element: <BooksPage />,
-            },
-            {
-                path: path.MOVIE,
-                element: <MoviesPage />,
-            },
-            {
-                path: path.MEMO,
-                element: <MemoPage />,
+                element: <CultureLayout />,
+                children: [
+                    {
+                        path: path.BOOK,
+                        element: <BooksPage />,
+                    },
+                    {
+                        path: path.MOVIE,
+                        element: <MoviesPage />,
+                    },
+                    {
+                        path: path.MEMO,
+                        element: <MemoPage />,
+                    },
+                ],
             },
             {
                 path: path.PROFILE,
@@ -71,6 +83,7 @@ const router = createBrowserRouter([
             },
         ],
     },
+
     {
         path: '*',
         element: <div>Not Found</div>,

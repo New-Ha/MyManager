@@ -1,8 +1,8 @@
-import { Outlet } from 'react-router-dom';
-import Sidebar from '../components/Sidebar';
 import styled from 'styled-components';
+import Sidebar from '../components/Sidebar';
+import { Outlet } from 'react-router-dom';
 
-const Container = styled.div`
+export const LayoutContainer = styled.div`
     margin: 2rem auto;
     width: 90vw;
     height: 90vh;
@@ -12,9 +12,9 @@ const Container = styled.div`
 
 export default function MainLayout() {
     return (
-        <Container>
+        <LayoutContainer>
             <Sidebar />
             <Outlet />
-        </Container>
+        </LayoutContainer>
     );
 }
