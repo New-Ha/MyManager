@@ -27,7 +27,7 @@ const mock = [
 ];
 
 const TodoListContainer = styled(MainContainer)`
-    width: 280px;
+    width: 300px;
     height: 90%;
     background-color: ${props => props.theme.yellow};
 `;
