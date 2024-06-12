@@ -7,9 +7,10 @@ import SignUpPage from './pages/SignUpPage';
 import HomePage from './pages/HomePage';
 import MemoPage from './pages/MemoPage';
 import ProfilePage from './pages/ProfilePage';
-import MainLayout from './layout/MainLayout';
+import HomeLayout from './layout/HomeLayout';
 import MoviesPage from './pages/MoviesPage';
 import BooksPage from './pages/BooksPage';
+import MainLayout from './layout/MainLayout';
 
 export const path = {
     MAIN: '/main',
@@ -46,12 +47,17 @@ const router = createBrowserRouter([
         element: <MainLayout />,
         children: [
             {
-                path: path.HOME,
-                element: <HomePage />,
-            },
-            {
-                path: path.CALENDER,
-                element: <DiaryPage />,
+                element: <HomeLayout />,
+                children: [
+                    {
+                        path: path.HOME,
+                        element: <HomePage />,
+                    },
+                    {
+                        path: path.CALENDER,
+                        element: <DiaryPage />,
+                    },
+                ],
             },
             {
                 path: path.BOOK,
@@ -71,6 +77,7 @@ const router = createBrowserRouter([
             },
         ],
     },
+
     {
         path: '*',
         element: <div>Not Found</div>,

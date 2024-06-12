@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import TodoItem from './TodoItem';
-import { MainContainer } from '../util/styles';
+import { MainContainer } from '../util/templateStyle';
 
 const mock = [
     {
@@ -27,7 +27,7 @@ const mock = [
 ];
 
 const TodoListContainer = styled(MainContainer)`
-    width: 280px;
+    width: 300px;
     height: 90%;
     background-color: ${props => props.theme.yellow};
 `;

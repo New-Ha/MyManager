@@ -21,7 +21,7 @@ const SideBarContainer = styled.nav`
 `;
 
 const ProfileContainer = styled(Link)`
-    padding: 1rem;
+    padding: 1rem 0.75rem;
     border: 1.5px solid ${props => props.theme.black};
     border-radius: 20px;
     margin-bottom: 1.75rem;

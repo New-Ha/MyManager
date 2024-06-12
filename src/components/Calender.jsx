@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { getDay, getDaysInMonth } from 'date-fns';
 import styled from 'styled-components';
-import { MainContainer } from '../util/styles';
+import { MainContainer } from '../util/templateStyle';
 import { Link } from 'react-router-dom';
 
 const CalenderContainer = styled(MainContainer)`
