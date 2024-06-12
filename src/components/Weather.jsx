@@ -15,6 +15,12 @@ const WeatherContainer = styled(MainContainer)`
     color: white;
 `;
 
+const LocationAndDescription = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+`;
+
 const LocationContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -79,13 +85,13 @@ export default function Weather() {
 
     return (
         <WeatherContainer>
-            <div>
+            <LocationAndDescription>
                 <LocationContainer>
                     <LocationIcon />
                     {weather.location}
                 </LocationContainer>
                 <DescriptionStr>{weather.description}</DescriptionStr>
-            </div>
+            </LocationAndDescription>
             <WeatherIcon src={weather.weatherIconUrl} alt={weather.description} />
             <WeatherTemp>{weather.temperature}°</WeatherTemp>
         </WeatherContainer>
